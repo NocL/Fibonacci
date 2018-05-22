@@ -34,7 +34,7 @@ public class FibonacciMain {
                 try {
                     num_scan = Integer.parseInt( val_scan );
                 } catch ( NumberFormatException ex ) {
-                    throw new Exception( "70以下の自然数を入力してください. 終了します. ", ex );
+                    throw new Exception( "70以下の自然数を入力してください. 終了します. ");
                 }
         }
         
