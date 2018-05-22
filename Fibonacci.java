@@ -24,10 +24,9 @@ class Fibonacci {
     }
 
     public String FibonacciNumbersString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 
-        for (long f : this.FibonacciNumbersList) sb.append(f).append( " ");
-        //this.FibonacciNumbersList.forEach ( f -> sb.append(f).append ( " " ));         
+        for (long fn : this.FibonacciNumbersList) sb.append(fn).append( " ");
         return sb.toString();
     }
 }

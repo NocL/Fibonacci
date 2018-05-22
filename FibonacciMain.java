@@ -39,8 +39,6 @@ public class FibonacciMain {
         }
         
         if ( num_scan <= 0 || 70 < num_scan ) {
-            //System.out.println( "70以下の自然数を入力してください. 終了します. ");
-            //System.exit( 0 );
             throw new Exception( "70以下の自然数を入力してください. 終了します. ");
         }
         
