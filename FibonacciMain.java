@@ -21,27 +21,39 @@ public class FibonacciMain {
     }
 
     private static int input(Scanner scan) throws Exception {
-        System.out.print( "入力してください : ");
-        String val_scan = scan.nextLine();
-        
         int num_scan = 0;
+
+        while ( true ) {
+            System.out.println( "フィボナッチ数列のN番目とN番目までのフィボナッチ数列を出力します." );
+            System.out.print( "70以下の自然数を入力してください ('quit', 'exit' で終了) : " );
+            String val_scan = scan.nextLine();
         
-        switch ( val_scan ) {
-            case "exit":
-            case "quit":
-                throw new Exception( "終了します." );
-            default:
-                try {
-                    num_scan = Integer.parseInt( val_scan );
-                } catch ( NumberFormatException ex ) {
-                    throw new Exception( "70以下の自然数を入力してください. 終了します. ");
-                }
+        
+            switch ( val_scan ) {
+                case "quit" :
+                case "exit" :
+                    System.exit(0);
+                default :
+                    try {
+                        num_scan = Integer.parseInt( val_scan );
+                    } catch ( NumberFormatException ex ) {
+                        System.out.println( "不正な値です : " + ex);
+                        System.out.println( "--" );
+                        continue;
+                    }
+            }
+
+
+            if ( num_scan < 0 || 70 < num_scan ) {
+                System.out.println( "不正な値です :  " + num_scan );
+                System.out.println( "--" );
+                continue;
+            } else {
+                break;
+            }
+                    
         }
-        
-        if ( num_scan <= 0 || 70 < num_scan ) {
-            throw new Exception( "70以下の自然数を入力してください. 終了します. ");
-        }
-        
+
         return num_scan;
     }
 }
