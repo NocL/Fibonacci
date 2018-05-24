@@ -19,7 +19,6 @@ class Fibonacci {
         for ( int i = 2; i < N.length; i++ ) {
             N[i] = N[i-1] + N[i-2];
         }
-
         return N[N.length - 1];
     }
 

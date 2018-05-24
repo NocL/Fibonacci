@@ -4,20 +4,16 @@ public class FibonacciMain {
     public static void main ( String args[] ) throws Exception {
         Scanner scan = new Scanner( System.in );
 
-        while ( true ) {
-            int num = input(scan);
+        int num = input(scan);
             
-            Fibonacci fib_n = new Fibonacci(num);
-            long result_n = fib_n.CalcFibonacci();
-            String result_n_numbers =fib_n.FibonacciNumbersString();
+        Fibonacci fib_n = new Fibonacci(num);
+        long result_n = fib_n.CalcFibonacci();
+        String result_n_numbers =fib_n.FibonacciNumbersString();
 
-            System.out.println("--");
-            System.out.println(num + "番目のフィボナッチ数は" + result_n);
-            System.out.println(num + "番目までのフィボナッチ数列:" + result_n_numbers);
-            System.out.println("--");
-        }
-
-
+        System.out.println("--");
+        System.out.println(num + "番目のフィボナッチ数は" + result_n);
+        System.out.println(num + "番目までのフィボナッチ数列:" + result_n_numbers);
+        System.out.println("--");
     }
 
     private static int input(Scanner scan) throws Exception {
